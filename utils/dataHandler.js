@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 export const getJSONData = async (fileName) => {
   const filePath = path.join(__dirname, '../data', fileName);
-  let raw = await fs.readFile(filePath, 'utf8');
+  const raw = await fs.readFile(filePath, 'utf8');
   return JSON.parse(raw);
 };
 
